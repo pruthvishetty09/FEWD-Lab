@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        body{
+            display:flex;
+            margin: 5vh;
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            color: white;
+            overflow: hidden;
+            padding: 10%;
+        }
+        .scrollableText{
+            white-space: nowrap;
+            position: absolute;
+            animation: scrollText 10s linear infinite;
+        }
+        .blinkingText{
+           animation: blinkText 1s alternate infinite;
+        }
+        @keyframes scrollText{
+            0%{
+                transform: translateX(100%);
+            }
+        }
+        @keyframes blinkText{
+            0%,100%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollableText">
+        This is a scrollableText
+    </div>
+    <div class="blinkingText">
+        <p>This is a blinkingText</p>
+    </div>
+</body>
+</html>
